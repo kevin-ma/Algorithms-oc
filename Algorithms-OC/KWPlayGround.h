@@ -50,7 +50,7 @@ _Pragma("clang diagnostic pop")
 #endif
 #endif
 
-@interface KWPalyGround : NSObject
+@interface KWPlayGround : NSObject
 
 @property (nonatomic, strong) KWTimeCounter *timeCounter;
 

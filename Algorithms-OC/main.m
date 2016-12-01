@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "KWPalyGround.h"
+#import "KWPlayGround.h"
 #import <objc/runtime.h>
 
 NSArray *subclassOfClass(Class class);
@@ -15,9 +15,10 @@ NSArray *subclassOfClass(Class class);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        NSArray *playGrounds = subclassOfClass([KWPalyGround class]);
+        NSArray *playGrounds = subclassOfClass([KWPlayGround class]);
         for (Class playGround in playGrounds) {
             
+            NSLog(@"准备在 %@ 操练场操练。。。",NSStringFromClass(playGround));
             [[[playGround alloc] init] play];
         }
         

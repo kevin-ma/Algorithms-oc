@@ -6,17 +6,17 @@
 //  Copyright © 2016年 makaiwen. All rights reserved.
 //
 
-#import "KWPalyGround.h"
+#import "KWPlayGround.h"
 
-@interface KWPalyGround ()
+@interface KWPlayGround ()
 
 @end
 
-@implementation KWPalyGround
+@implementation KWPlayGround
 
 - (void)play
 {
-    NSLog(@"\n%@目前闲置",NSStringFromClass([self class]));
+    NSLog(@"\n%@ 没有操练队列",NSStringFromClass([self class]));
 }
 
 - (KWTimeCounter *)timeCounter

@@ -30,8 +30,8 @@
 /* 快速排序 */
 - (NSArray *)quickSort;
 
-/* 检查结果是否正确 */
-- (BOOL)isRightWithResult:(NSArray *)result;
+/* 检查结果是否正确，nil表示正确 */
+- (NSString *)isRightWithResult:(NSArray *)result;
 
 /* 正确的排序结果 */
 - (NSArray *)rightSort;

@@ -6,8 +6,8 @@
 //  Copyright © 2016年 makaiwen. All rights reserved.
 //
 
-#import "KWPalyGround.h"
+#import "KWPlayGround.h"
 
-@interface KWSortPlayGround : KWPalyGround
+@interface KWSortPlayGround : KWPlayGround
 
 @end
