@@ -14,7 +14,7 @@ KWTimeCounter // 时间计算类
 
 ## 索引
 
-#### [排序算法](https://raw.githubusercontent.com/kevin-ma/Algorithms-oc/master/README_FILES/Sort.md)
+#### [排序算法](https://github.com/kevin-ma/Algorithms-oc/blob/master/README_FILES/Sort.md)
 
 * 选择排序
 * 冒泡排序
