@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E4201ECE1DEEDE4300FCDCE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201ECD1DEEDE4300FCDCE1 /* main.m */; };
+		E4201ED81DEEDEB900FCDCE1 /* KWTimeCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201ED71DEEDEB900FCDCE1 /* KWTimeCounter.m */; };
+		E4201EDB1DEEDFF300FCDCE1 /* KWIntArrayBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201EDA1DEEDFF300FCDCE1 /* KWIntArrayBuilder.m */; };
+		E4201EDE1DEEE2CE00FCDCE1 /* KWSortAlgorithms.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201EDD1DEEE2CE00FCDCE1 /* KWSortAlgorithms.m */; };
+		E4201EE11DEEE4BA00FCDCE1 /* KWPalyGround.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201EE01DEEE4BA00FCDCE1 /* KWPalyGround.m */; };
+		E4201EE41DEEF09100FCDCE1 /* KWSortPlayGround.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201EE31DEEF09100FCDCE1 /* KWSortPlayGround.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4201EC81DEEDE4300FCDCE1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E4201ECA1DEEDE4300FCDCE1 /* Algorithms-OC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Algorithms-OC"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4201ECD1DEEDE4300FCDCE1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4201ED61DEEDEB900FCDCE1 /* KWTimeCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWTimeCounter.h; sourceTree = "<group>"; };
+		E4201ED71DEEDEB900FCDCE1 /* KWTimeCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWTimeCounter.m; sourceTree = "<group>"; };
+		E4201ED91DEEDFF300FCDCE1 /* KWIntArrayBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWIntArrayBuilder.h; sourceTree = "<group>"; };
+		E4201EDA1DEEDFF300FCDCE1 /* KWIntArrayBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWIntArrayBuilder.m; sourceTree = "<group>"; };
+		E4201EDC1DEEE2CE00FCDCE1 /* KWSortAlgorithms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSortAlgorithms.h; sourceTree = "<group>"; };
+		E4201EDD1DEEE2CE00FCDCE1 /* KWSortAlgorithms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSortAlgorithms.m; sourceTree = "<group>"; };
+		E4201EDF1DEEE4BA00FCDCE1 /* KWPalyGround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWPalyGround.h; sourceTree = "<group>"; };
+		E4201EE01DEEE4BA00FCDCE1 /* KWPalyGround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWPalyGround.m; sourceTree = "<group>"; };
+		E4201EE21DEEF09100FCDCE1 /* KWSortPlayGround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSortPlayGround.h; sourceTree = "<group>"; };
+		E4201EE31DEEF09100FCDCE1 /* KWSortPlayGround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSortPlayGround.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4201EC71DEEDE4300FCDCE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E4201EC11DEEDE4300FCDCE1 = {
+			isa = PBXGroup;
+			children = (
+				E4201ECC1DEEDE4300FCDCE1 /* Algorithms-OC */,
+				E4201ECB1DEEDE4300FCDCE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E4201ECB1DEEDE4300FCDCE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4201ECA1DEEDE4300FCDCE1 /* Algorithms-OC */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4201ECC1DEEDE4300FCDCE1 /* Algorithms-OC */ = {
+			isa = PBXGroup;
+			children = (
+				E4201ECD1DEEDE4300FCDCE1 /* main.m */,
+				E4201EDF1DEEE4BA00FCDCE1 /* KWPalyGround.h */,
+				E4201EE01DEEE4BA00FCDCE1 /* KWPalyGround.m */,
+				E4201EE21DEEF09100FCDCE1 /* KWSortPlayGround.h */,
+				E4201EE31DEEF09100FCDCE1 /* KWSortPlayGround.m */,
+				E4201ED51DEEDE7E00FCDCE1 /* Sort */,
+				E4201ED41DEEDE7000FCDCE1 /* Lib */,
+			);
+			path = "Algorithms-OC";
+			sourceTree = "<group>";
+		};
+		E4201ED41DEEDE7000FCDCE1 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E4201ED61DEEDEB900FCDCE1 /* KWTimeCounter.h */,
+				E4201ED71DEEDEB900FCDCE1 /* KWTimeCounter.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		E4201ED51DEEDE7E00FCDCE1 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				E4201ED91DEEDFF300FCDCE1 /* KWIntArrayBuilder.h */,
+				E4201EDA1DEEDFF300FCDCE1 /* KWIntArrayBuilder.m */,
+				E4201EDC1DEEE2CE00FCDCE1 /* KWSortAlgorithms.h */,
+				E4201EDD1DEEE2CE00FCDCE1 /* KWSortAlgorithms.m */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4201EC91DEEDE4300FCDCE1 /* Algorithms-OC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4201ED11DEEDE4300FCDCE1 /* Build configuration list for PBXNativeTarget "Algorithms-OC" */;
+			buildPhases = (
+				E4201EC61DEEDE4300FCDCE1 /* Sources */,
+				E4201EC71DEEDE4300FCDCE1 /* Frameworks */,
+				E4201EC81DEEDE4300FCDCE1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Algorithms-OC";
+			productName = "Algorithms-OC";
+			productReference = E4201ECA1DEEDE4300FCDCE1 /* Algorithms-OC */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4201EC21DEEDE4300FCDCE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = makaiwen;
+				TargetAttributes = {
+					E4201EC91DEEDE4300FCDCE1 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E4201EC51DEEDE4300FCDCE1 /* Build configuration list for PBXProject "Algorithms-OC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E4201EC11DEEDE4300FCDCE1;
+			productRefGroup = E4201ECB1DEEDE4300FCDCE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4201EC91DEEDE4300FCDCE1 /* Algorithms-OC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4201EC61DEEDE4300FCDCE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4201EDB1DEEDFF300FCDCE1 /* KWIntArrayBuilder.m in Sources */,
+				E4201EDE1DEEE2CE00FCDCE1 /* KWSortAlgorithms.m in Sources */,
+				E4201EE11DEEE4BA00FCDCE1 /* KWPalyGround.m in Sources */,
+				E4201ECE1DEEDE4300FCDCE1 /* main.m in Sources */,
+				E4201EE41DEEF09100FCDCE1 /* KWSortPlayGround.m in Sources */,
+				E4201ED81DEEDEB900FCDCE1 /* KWTimeCounter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E4201ECF1DEEDE4300FCDCE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4201ED01DEEDE4300FCDCE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E4201ED21DEEDE4300FCDCE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E4201ED31DEEDE4300FCDCE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4201EC51DEEDE4300FCDCE1 /* Build configuration list for PBXProject "Algorithms-OC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4201ECF1DEEDE4300FCDCE1 /* Debug */,
+				E4201ED01DEEDE4300FCDCE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4201ED11DEEDE4300FCDCE1 /* Build configuration list for PBXNativeTarget "Algorithms-OC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4201ED21DEEDE4300FCDCE1 /* Debug */,
+				E4201ED31DEEDE4300FCDCE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4201EC21DEEDE4300FCDCE1 /* Project object */;
+}
