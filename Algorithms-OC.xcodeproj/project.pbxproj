@@ -13,6 +13,8 @@
 		E4201EDE1DEEE2CE00FCDCE1 /* KWSortAlgorithms.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201EDD1DEEE2CE00FCDCE1 /* KWSortAlgorithms.m */; };
 		E4201EE11DEEE4BA00FCDCE1 /* KWPlayGround.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201EE01DEEE4BA00FCDCE1 /* KWPlayGround.m */; };
 		E4201EE41DEEF09100FCDCE1 /* KWSortPlayGround.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201EE31DEEF09100FCDCE1 /* KWSortPlayGround.m */; };
+		E4201EEA1DF12C3700FCDCE1 /* KWHeapBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201EE91DF12C3700FCDCE1 /* KWHeapBuilder.m */; };
+		E4201EED1DF12C8200FCDCE1 /* KWMaxHeap.m in Sources */ = {isa = PBXBuildFile; fileRef = E4201EEC1DF12C8200FCDCE1 /* KWMaxHeap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,10 @@
 		E4201EE01DEEE4BA00FCDCE1 /* KWPlayGround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWPlayGround.m; sourceTree = "<group>"; };
 		E4201EE21DEEF09100FCDCE1 /* KWSortPlayGround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSortPlayGround.h; sourceTree = "<group>"; };
 		E4201EE31DEEF09100FCDCE1 /* KWSortPlayGround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSortPlayGround.m; sourceTree = "<group>"; };
+		E4201EE81DF12C3700FCDCE1 /* KWHeapBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWHeapBuilder.h; sourceTree = "<group>"; };
+		E4201EE91DF12C3700FCDCE1 /* KWHeapBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWHeapBuilder.m; sourceTree = "<group>"; };
+		E4201EEB1DF12C8200FCDCE1 /* KWMaxHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWMaxHeap.h; sourceTree = "<group>"; };
+		E4201EEC1DF12C8200FCDCE1 /* KWMaxHeap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWMaxHeap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,8 @@
 			children = (
 				E4201ED61DEEDEB900FCDCE1 /* KWTimeCounter.h */,
 				E4201ED71DEEDEB900FCDCE1 /* KWTimeCounter.mm */,
+				E4201EE81DF12C3700FCDCE1 /* KWHeapBuilder.h */,
+				E4201EE91DF12C3700FCDCE1 /* KWHeapBuilder.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -99,6 +107,8 @@
 				E4201EDA1DEEDFF300FCDCE1 /* KWIntArrayBuilder.m */,
 				E4201EDC1DEEE2CE00FCDCE1 /* KWSortAlgorithms.h */,
 				E4201EDD1DEEE2CE00FCDCE1 /* KWSortAlgorithms.m */,
+				E4201EEB1DF12C8200FCDCE1 /* KWMaxHeap.h */,
+				E4201EEC1DF12C8200FCDCE1 /* KWMaxHeap.m */,
 			);
 			path = Sort;
 			sourceTree = "<group>";
@@ -162,7 +172,9 @@
 			files = (
 				E4201EDB1DEEDFF300FCDCE1 /* KWIntArrayBuilder.m in Sources */,
 				E4201EDE1DEEE2CE00FCDCE1 /* KWSortAlgorithms.m in Sources */,
+				E4201EEA1DF12C3700FCDCE1 /* KWHeapBuilder.m in Sources */,
 				E4201EE11DEEE4BA00FCDCE1 /* KWPlayGround.m in Sources */,
+				E4201EED1DF12C8200FCDCE1 /* KWMaxHeap.m in Sources */,
 				E4201ECE1DEEDE4300FCDCE1 /* main.m in Sources */,
 				E4201EE41DEEF09100FCDCE1 /* KWSortPlayGround.m in Sources */,
 				E4201ED81DEEDEB900FCDCE1 /* KWTimeCounter.mm in Sources */,

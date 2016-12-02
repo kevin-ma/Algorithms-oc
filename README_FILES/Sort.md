@@ -205,6 +205,96 @@
 }
 ```
 
+#### 堆排序
+
+###### 思想
+
+是应用最大堆（最小堆）实现的一种排序方法，所谓最大堆就是一种完全二叉树，满足父节点的值大于（含等于）它的左右子节点的值。按照从上层至下层的顺序可以将最大堆用数据的形式保存，那么它的每一组父节点与子节点在索引上都存在一定的关系。如果我们向堆中添加元素，那么它可能不再是一个最大堆，但是我们利用上面提到的这种关系可以快速将这个元素放到合适的位置，从而使其再次成为最大堆，移除元素同理。综上我们可以利用最大堆的这个性质完成对一个序列的排序，而且还可以实现优先队列。
+
+###### 代码
+
+新建最大堆类，以动态调整结构，使其满足最大堆特性。
+
+```
+#import "KWMaxHeap.h"
+
+@interface KWMaxHeap ()
+
+@property (nonatomic, strong) NSMutableArray *list;
+
+@end
+
+@implementation KWMaxHeap
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _list = [@[] mutableCopy];
+    }
+    return self;
+}
+
+- (void)addItem:(NSInteger)item
+{
+    [self.list addObject:@(item)];
+    [self shiftUpFromIndex:self.list.count - 1];
+}
+
+- (NSInteger)extractMaxItem
+{
+    if (self.list.count > 0) {
+        NSInteger value = [self.list[0] integerValue];
+        [self.list exchangeObjectAtIndex:0 withObjectAtIndex:self.list.count - 1];
+        [self.list removeLastObject];
+        [self shiftDownFromIndex:0];
+        return value;
+    }
+    return -1;
+}
+
+- (void)shiftUpFromIndex:(NSInteger)index
+{
+    while (index > 0 && self.list[(index - 1) / 2] < self.list[index]) {
+        [self.list exchangeObjectAtIndex:(index - 1) / 2 withObjectAtIndex:index];
+        index = (index - 1) / 2;
+    }
+}
+
+- (void)shiftDownFromIndex:(NSInteger)index
+{
+    while (index * 2 + 1 < self.list.count) {
+        NSInteger sub = index * 2 + 1;
+        if (sub + 1 < self.list.count && self.list[sub + 1] > self.list[sub]) {
+            sub++;
+        }
+        if (self.list[index] < self.list[sub]) {
+            [self.list exchangeObjectAtIndex:index withObjectAtIndex:sub];
+        }
+        index = sub;
+    }
+}
+
+@end
+```
+
+有了以上的最大堆类的添加元素和删除元素的方法，就可以很容易完成排序，只要把元素加到堆中，在逆向保存到数组即可。
+
+```
+- (NSArray *)heapSort
+{
+    KWMaxHeap *heap = [[KWMaxHeap alloc] init];
+    for (NSNumber *item in _array) {
+        [heap addItem:[item integerValue]];
+    }
+    NSMutableArray *temp = [NSMutableArray arrayWithArray:_array];
+    for (NSInteger i = temp.count - 1; i >=0; i--) {
+        NSInteger v = [heap extractMaxItem];
+        temp[i] = @(v);
+    }
+    return [temp copy];
+}
+```
+
 #### 运行结果
 
 以下结果以 0 ~ 1000 为取值范围，取 10000 个元素作为测试对象。

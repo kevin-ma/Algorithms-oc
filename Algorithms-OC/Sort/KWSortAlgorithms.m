@@ -7,6 +7,7 @@
 //
 
 #import "KWSortAlgorithms.h"
+#import "KWMaxHeap.h"
 
 @interface KWSortAlgorithms ()
 
@@ -57,7 +58,16 @@
 
 - (NSArray *)heapSort
 {
-    return nil;
+    KWMaxHeap *heap = [[KWMaxHeap alloc] init];
+    for (NSNumber *item in _array) {
+        [heap addItem:[item integerValue]];
+    }
+    NSMutableArray *temp = [NSMutableArray arrayWithArray:_array];
+    for (NSInteger i = temp.count - 1; i >=0; i--) {
+        NSInteger v = [heap extractMaxItem];
+        temp[i] = @(v);
+    }
+    return [temp copy];
 }
 
 - (NSArray *)quickSort

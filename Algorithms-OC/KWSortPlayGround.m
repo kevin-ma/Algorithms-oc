@@ -61,11 +61,18 @@
         return [self.sorter mergeSort];
     }];
     [self showResult:[self.sorter isRightWithResult:result]];
-    //    NSArray *right = [self.sorter rightSort];
+    
+    /* 堆排序 */
+    result = [self.timeCounter timeCountWithTitle:@"堆排序" time:&time forAction:^id{
+        @strongify(self);
+        return [self.sorter heapSort];
+    }];
+    [self showResult:[self.sorter isRightWithResult:result]];
+//    NSArray *right = [self.sorter rightSort];
 //    for (NSInteger i = 0; i < result.count; i++) {
 //        NSString *log = [NSString stringWithFormat:@"%@---%@",right[i],result[i]];
 //        if ([right[i] integerValue] != [result[i] integerValue]) {
-//            log = [log stringByAppendingString:@"有问题"];
+//            log = [log stringByAppendingString:@" 有问题"];
 //        }
 //        NSLog(@"%@",log);
 //    }
