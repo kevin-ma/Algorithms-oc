@@ -22,6 +22,7 @@
 
 - (void)play
 {
+    return;
     self.sorter.array = [self.arrayBuilder randomArrayFrom:0 to:1000 andCount:10000];
 //    self.sorter.array = @[@30,@20,@34,@32,@54,@33,@12,@35,@43,@46,@23,@42];
     NSTimeInterval time = 0;
