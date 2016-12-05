@@ -16,6 +16,8 @@
 
 @property (nonatomic, assign) NSUInteger defaultCount;
 
+@property (nonatomic, assign) BOOL unique;
+
 - (NSArray *)randomArrayWithCount:(NSUInteger)count;
 
 - (NSArray *)randomArrayFrom:(NSUInteger)from to:(NSUInteger)to;

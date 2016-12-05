@@ -19,6 +19,16 @@ KWTreeNode *KWTreeNodeMake(int key,int value)
     return node;
 }
 
+KWTreeNode *KWTreeNodeCopy(KWTreeNode *aNode)
+{
+    KWTreeNode *node = (KWTreeNode *)malloc(sizeof(KWTreeNode));
+    node->left = aNode->left;
+    node->right = aNode->right;
+    node->key = aNode->key;
+    node->value = aNode->value;
+    return node;
+}
+
 typedef enum : NSUInteger {
     KWTreeNodeTraversalDLR,
     KWTreeNodeTraversalLDR,
@@ -61,6 +71,51 @@ typedef enum : NSUInteger {
         node = node->right;
     }
     return &node->value;
+}
+
+# pragma mark - 删除节点
+
+- (void)deleteValue:(int)value
+{
+    self.root = [self deleteValue:value fromNode:self.root];
+}
+
+- (KWTreeNode *)deleteValue:(int)value fromNode:(KWTreeNode *)node
+{
+    if (node == NULL) {
+        return NULL;
+    }
+    if (node->value == value) {
+        if (node->right == NULL) {
+            KWTreeNode *nd = node->left;
+            delete node;
+            _count--;
+            return nd;
+        }
+        if (node->left == NULL) {
+            KWTreeNode *nd = node->right;
+            delete node;
+            _count--;
+            return nd;
+        }
+        KWTreeNode *aNode = node->right;
+        while (aNode->left != NULL) {
+            aNode = aNode->left;
+        }
+        aNode->left = node->left;
+        if (node->right != aNode) {
+            aNode->right = node->right;
+        }
+        _count--;
+        delete node;
+        return aNode;
+        
+    } else if (node->value > value) {
+        node->left = [self deleteValue:value fromNode:node->left];
+    } else if (node->value < value) {
+        node->right = [self deleteValue:value fromNode:node->right];
+    }
+    return node;
 }
 
 # pragma mark - 遍历

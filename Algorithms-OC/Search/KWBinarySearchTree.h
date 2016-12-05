@@ -17,6 +17,8 @@ typedef struct KWTreeNode {
 
 KWTreeNode *KWTreeNodeMake(int key,int value);
 
+KWTreeNode *KWTreeNodeCopy(KWTreeNode *aNode);
+
 @interface KWBinarySearchTree : NSObject
 
 - (int)size;
@@ -41,5 +43,9 @@ KWTreeNode *KWTreeNodeMake(int key,int value);
 - (void)insertValue:(int)value forKey:(int)key;
 
 - (int *)getValueForKey:(int)key;
+
+
+/** 删除*/
+- (void)deleteValue:(int)value;
 
 @end

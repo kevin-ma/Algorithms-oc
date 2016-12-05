@@ -22,7 +22,8 @@
 - (void)play
 {
     NSInteger count = 10000;
-    NSArray *array = [self.arrayBuilder randomArrayFrom:0 to:1000 andCount:count];
+    self.arrayBuilder.unique = YES;
+    NSArray *array = [self.arrayBuilder randomArrayFrom:0 to:1000000 andCount:count];
     
     // 二分查找
     KWSortAlgorithms *sort = [[KWSortAlgorithms alloc] init];
@@ -52,7 +53,7 @@
         }
     }
     
-    array = @[@64,@53,@60,@49,@78,@75,@93,@70];
+//    array = @[@64,@53,@60,@49,@78,@75,@93,@70];
     
     // 二分搜索树查找
     for (NSNumber *indexObj in values) {
@@ -106,6 +107,25 @@
     [self logArray:orderList withTitle:@"后序"];
     orderList = [tree LevelTraversal];
     [self logArray:orderList withTitle:@"层序"];
+    
+    // 删除
+    [tree deleteValue:[array[randomIndex] intValue]];
+    orderList = [tree DLRTraversal];
+    [self logArray:orderList withTitle:@"删除后前序"];
+    orderList = [tree LDRTraversal];
+    [self logArray:orderList withTitle:@"删除后中序"];
+    orderList = [tree LRDTraversal];
+    [self logArray:orderList withTitle:@"删除后后序"];
+    orderList = [tree LevelTraversal];
+    [self logArray:orderList withTitle:@"删除后层序"];
+    
+    int minValue = 0;
+    while ([tree size] > 0) {
+        int value = *([tree minValue]);
+        NSLog(@"待删除最小值：%d",value);
+        NSAssert(minValue <= value, @"排序有误");
+        [tree deleteValue:value];
+    }
 }
 
 // 二分查找

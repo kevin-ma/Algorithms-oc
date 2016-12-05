@@ -43,9 +43,20 @@
     NSMutableArray *temp = [@[] mutableCopy];
     for (NSInteger i = 0; i < count; i++) {
         NSInteger value = arc4random() % (to - from) + from;
-        [temp addObject:@(value)];
+        BOOL exist = NO;
+        if (_unique) {
+            if ([temp containsObject:@(value)]) {
+                exist = YES;
+            }
+        }
+        if (!exist) {
+            [temp addObject:@(value)];
+        } else {
+            i--;
+        }
     }
     return [temp copy];
 }
+
 
 @end
