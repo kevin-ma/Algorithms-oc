@@ -52,6 +52,8 @@
         }
     }
     
+    array = @[@64,@53,@60,@49,@78,@75,@93,@70];
+    
     // 二分搜索树查找
     for (NSNumber *indexObj in values) {
         KWBinarySearchTree *tree = [[KWBinarySearchTree alloc] init];
@@ -92,6 +94,18 @@
     int min = *([tree minValue]);
     NSLog(max == [sortArray.lastObject intValue] ? @"最大值正确" : @"最大值有误");
     NSLog(min == [sortArray.firstObject intValue] ? @"最小值正确" : @"最小值有误");
+    
+    // 遍历
+    [self logArray:array withTitle:@"原始"];
+    NSArray *orderList;
+    orderList = [tree DLRTraversal];
+    [self logArray:orderList withTitle:@"前序"];
+    orderList = [tree LDRTraversal];
+    [self logArray:orderList withTitle:@"中序"];
+    orderList = [tree LRDTraversal];
+    [self logArray:orderList withTitle:@"后序"];
+    orderList = [tree LevelTraversal];
+    [self logArray:orderList withTitle:@"层序"];
 }
 
 // 二分查找
@@ -111,6 +125,11 @@
         }
     }
     return NSNotFound;
+}
+
+- (void)logArray:(NSArray *)array withTitle:(NSString *)title
+{
+    NSLog(@"%@:%@",title,[array componentsJoinedByString:@","]);
 }
 
 #pragma mark - getter

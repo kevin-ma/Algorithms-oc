@@ -179,6 +179,106 @@ KWTreeNode *KWTreeNodeMake(int key,int value)
 }
 ```
 
-天啊~感觉又回到了小学。
+天啊~感觉又回到了小学时代了！！！
+
+##### 深度优先搜索（前序、中序、后序）
+
+这一部分主要说的就是二叉树的一种遍历算法，注意不仅仅是适用于二叉搜索树。我们用深度优先搜索来作为标题只是用来吸引眼球，因为深度优先搜索是一个很大的话题，它的适用范围非常广，而不是仅仅二叉树，但我们说的二叉树的前序遍历、中序遍历、后序遍历是深度优先搜索的一种体现。所谓深度，通俗点儿说，就是一条路走到黑，撞了南墙再回头。那在二叉树中就是说从一个节点A，然后看是否有左子节点B，如果有那这个B就变成节点A，然后再找左子节点B，如此下去直到不再有左子节点，返回上一层，再同理寻找右子节点。
+
+那前序、中序、后序是怎么一说呢？为什么就在一个小标题下说明呢？我们假设有一节点A，它有左子节点B，右子节点C，假定我们遍历的顺序是A->B->A->C->A，可以画图理解一下，然后我们再假定A节点上有三盏灯，经过一次我们点亮一盏灯，那么前序就是在A节点第一盏灯点亮的时候对A做处理，中序就是第二盏灯点亮的时候对A做处理，后序就是第三盏灯点亮的时候对A做处理。SO总结如下：前序、中序、后序它们三者唯一的区别就是做操作或者说是记录的位置不同，遍历的顺序其实是一样的。再分析一下似不似这样滴吧~
+
+##### 广度优先搜索
+
+所谓的广度优先在二叉树中就是按照层的顺序遍历数，遍历方法如下：先创建一个队列，如果这个队列不为空就一直执行操作。将根节点推入队列中，然后开始队列的操作，先将队列中最前面的节点推出队列，然后对其操作或者记录，最后分别取出该节点的子节点推入队列。这就是一个完整的二叉树广度优先搜索的过程。
+
+我拿了一些数据联合深度优先搜索做了下测试，结果如下
+
+|类型|结果|其他|
+|---|---|---|
+|-|64,53,60,49,78,75,93,70|-|
+|前序|64,53,49,60,78,75,70,93|-|
+|中序|49,53,60,64,70,75,78,93|在二叉搜索树中这个是有序的|
+|后序|49,60,53,70,75,93,78,64|-|
+|层序|64,53,78,49,60,75,93,70|-|
+
+
+代码如下
+
+```
+/** 前序遍历 */
+- (NSArray *)DLRTraversal
+{
+    NSMutableArray *temp = [@[] mutableCopy];
+    [self traversalWithType:KWTreeNodeTraversalDLR fromNode:self.root toList:temp];
+    return [temp copy];
+}
+
+/** 中序遍历 */
+-(NSArray *)LDRTraversal
+{
+    NSMutableArray *temp = [@[] mutableCopy];
+    [self traversalWithType:KWTreeNodeTraversalLDR fromNode:self.root toList:temp];
+    return [temp copy];
+}
+
+/** 后序遍历 */
+- (NSArray *)LRDTraversal
+{
+    NSMutableArray *temp = [@[] mutableCopy];
+    [self traversalWithType:KWTreeNodeTraversalLRD fromNode:self.root toList:temp];
+    return [temp copy];
+}
+
+- (NSArray *)LevelTraversal
+{
+    NSMutableArray *temp = [@[] mutableCopy];
+    [self levelTraversalFromNode:self.root toList:temp];
+    return [temp copy];
+}
+
+- (void)traversalWithType:(KWTreeNodeTraversal)type fromNode:(KWTreeNode *)node toList:(NSMutableArray *)list
+{
+    if (node == NULL) {
+        return;
+    }
+    if (type == KWTreeNodeTraversalDLR) {
+        [list addObject:@(node->value)];
+    }
+    if (node->left) {
+        [self traversalWithType:type fromNode:node->left toList:list];
+    }
+    if (type == KWTreeNodeTraversalLDR) {
+        [list addObject:@(node->value)];
+    }
+    if (node->right) {
+        [self traversalWithType:type fromNode:node->right toList:list];
+    }
+    if (type == KWTreeNodeTraversalLRD) {
+        [list addObject:@(node->value)];
+    }
+}
+
+- (void)levelTraversalFromNode:(KWTreeNode *)node toList:(NSMutableArray *)list
+{
+    if (node == NULL) {
+        return;
+    }
+    queue<KWTreeNode *> queue;
+    queue.push(node);
+    while (!queue.empty()) {
+        KWTreeNode *aNode = queue.front();
+        [list addObject:@(aNode->value)];
+        queue.pop();
+        if (aNode->left) {
+            queue.push(aNode->left);
+        }
+        if (aNode->right) {
+            queue.push(aNode->right);
+        }
+    }
+}
+```
+
+
 
 

@@ -19,13 +19,24 @@ KWTreeNode *KWTreeNodeMake(int key,int value);
 
 @interface KWBinarySearchTree : NSObject
 
-- (NSInteger)size;
+- (int)size;
 
 - (BOOL)isEmpty;
 
 - (int *)minValue;
 
 - (int *)maxValue;
+
+/** 前序遍历 */
+- (NSArray *)DLRTraversal;
+
+/** 中序遍历 */
+-(NSArray *)LDRTraversal;
+
+/** 后序遍历 */
+- (NSArray *)LRDTraversal;
+
+- (NSArray *)LevelTraversal;
 
 - (void)insertValue:(int)value forKey:(int)key;
 
